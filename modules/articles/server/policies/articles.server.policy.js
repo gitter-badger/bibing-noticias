@@ -19,7 +19,7 @@ exports.invokeRolesPolicies = function() {
             permissions: '*'
         }, {
             resources: '/api/articles/:articleId',
-            permissions: ['get', 'post', 'delete', 'put']
+            permissions: '*'
         }]
     }, {
         roles: ['user'],
