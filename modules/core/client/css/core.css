@@ -101,11 +101,7 @@ a:hover {
     color: #fff;
 }
 
-.bottom {
-    display: inline-block;
+p.footer-content {
     height: 75px;
-}
-
-p {
     color: #3F3F3F
 }

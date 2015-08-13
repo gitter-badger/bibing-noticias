@@ -16,7 +16,7 @@
                         </a>
                     </div>
                     <div class="panel-footer">
-                        <p>{{article.content | limitTo:130}}{{article.content.length
+                        <p class="footer-content">{{article.content | limitTo:130}}{{article.content.length
                             < 130? '': '...'}} <a data-ui-sref="articles.view({articleId: article._id})"> Seguir leyendo</a>
                         </p>
                         <hr class="hr-bibing" />
