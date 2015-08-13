@@ -1,35 +1,111 @@
 .content {
-  margin-top: 50px;
+    margin-top: 50px;
 }
+
 .undecorated-link:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 [ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],
 [x-ng-cloak],
 .ng-cloak,
 .x-ng-cloak {
-  display: none !important;
+    display: none !important;
 }
+
 .ng-invalid.ng-dirty {
-  border-color: #FA787E;
+    border-color: #FA787E;
 }
+
 .ng-valid.ng-dirty {
-  border-color: #78FA89;
+    border-color: #78FA89;
 }
+
 .header-profile-image {
-  opacity: 0.8;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  margin-right: 5px;
+    opacity: 0.8;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin-right: 5px;
 }
+
 .open .header-profile-image,
 a:hover .header-profile-image {
-  opacity: 1;
+    opacity: 1;
 }
+
 .user-header-dropdown-toggle {
-  padding-top: 11px !important;
-  padding-bottom: 11px !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+}
+
+.panel-pagination {
+    margin: 0 0 !important;
+}
+
+.panel-title-centered {
+    font-weight: bold;
+    width: 1%;
+    height: 80px;
+    display: table-cell !important;
+    vertical-align: middle;
+}
+
+a.panel-title.panel-title-centered {
+    color: #3F3F3F;
+    border-bottom-color: #3F3F3F;
+}
+
+.panel-body-image {
+    padding: 0;
+}
+
+.navbar-bibing {
+    background-image: linear-gradient(to bottom, #9c1f2f 0%, #9c1f2f 100%);
+    border-bottom-width: 0;
+    box-shadow: 0px 3px 5px #888;
+}
+
+.navbar-bibing .navbar-brand {
+    color: #fff;
+}
+
+.panel-bibing {
+    box-shadow: 3px 3px 10px #AAA;
+    border: 0;
+}
+
+.panel-bibing > .panel-heading {
+    background-image: linear-gradient(to bottom, #FFC526 0%, #FFC526 100%);
+}
+
+.panel-bibing > .panel-footer {
+    background-image: linear-gradient(to bottom, #FEE9B2 0%, #FEE9B2 100%);
+}
+
+.hr-bibing {
+    border-top: 1px solid #999;
+}
+
+a {
+    color: #9C1F2F;
+}
+
+a:hover {
+    color: #9C1F2F;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.bottom {
+    display: inline-block;
+    height: 75px;
+}
+
+p {
+    color: #3F3F3F
 }

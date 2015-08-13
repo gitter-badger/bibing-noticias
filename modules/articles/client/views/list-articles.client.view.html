@@ -1,23 +1,30 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
     <div class="page-header">
-        <h1>Noticias</h1>
+        <h2>Agosto</h2>
     </div>
     <div class="container">
         <div class="row">
-            <div data-ng-repeat="article in articles" class="col-sm-6 col-md-4 col-lg-4">
-                <div class="panel panel-default">
+            <div data-ng-repeat="article in articles" class="col-md-4">
+                <div class="panel panel-bibing">
                     <div class="panel-heading">
-                        <a data-ui-sref="articles.view({articleId: article._id})"><h4 class="panel-title" data-ng-bind="article.title"></h4></a>
+                        <a class="panel-title panel-title-centered" data-ui-sref="articles.view({articleId: article._id})">
+                            <h4 data-ng-bind="article.title"></h4>
+                        </a>
                     </div>
-                    <div class="panel-body">
-                        <img width="100%" src="http://1.bp.blogspot.com/-l1Z6vu1oXDw/TgMHzIISj_I/AAAAAAAAAA8/BORl9eJaVV0/s1600/73683_105405226195292_105362022866279_46652_4843511_n.jpg"></img>
+                    <div class="panel-body panel-body-image">
+                        <a data-ui-sref="articles.view({articleId: article._id})"><img width="100%" src="http://1.bp.blogspot.com/-l1Z6vu1oXDw/TgMHzIISj_I/AAAAAAAAAA8/BORl9eJaVV0/s1600/73683_105405226195292_105362022866279_46652_4843511_n.jpg"></img>
+                        </a>
                     </div>
                     <div class="panel-footer">
-                        <p data-ng-bind="article.content"></p>
-                        <hr/>
-                        <small>
+                        <p>{{article.content | limitTo:130}}{{article.content.length
+                            < 130? '': '...'}} <a data-ui-sref="articles.view({articleId: article._id})"> Seguir leyendo</a>
+                        </p>
+                        <hr class="hr-bibing" />
+                        <p>
+                            <small>
                              Publicado a las {{article.created | date:"HH:mm:ss 'del' dd-MM-yyyy"}} por {{article.user.displayName}}
-                        </small>
+                            </small>
+                        </p>
                     </div>
                 </div>
             </div>
