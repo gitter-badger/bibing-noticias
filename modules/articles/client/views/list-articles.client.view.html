@@ -2,17 +2,28 @@
     <div class="page-header">
         <h1>Noticias</h1>
     </div>
-    <div class="list-group">
-        <a data-ng-repeat="article in articles" data-ui-sref="articles.view({articleId: article._id})" class="list-group-item">
-            <small class="list-group-item-text">
-        Creado a las {{article.created | date:"HH:mm:ss 'del' dd-MM-yyyy"}} por
-        <span data-ng-bind="article.user.displayName"></span>
-      </small>
-            <h4 class="list-group-item-heading" data-ng-bind="article.title"></h4>
-            <p class="list-group-item-text" data-ng-bind="article.content"></p>
-        </a>
+    <div class="container">
+        <div class="row">
+            <div data-ng-repeat="article in articles" class="col-sm-6 col-md-4 col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a data-ui-sref="articles.view({articleId: article._id})"><h4 class="panel-title" data-ng-bind="article.title"></h4></a>
+                    </div>
+                    <div class="panel-body">
+                        <img width="100%" src="http://1.bp.blogspot.com/-l1Z6vu1oXDw/TgMHzIISj_I/AAAAAAAAAA8/BORl9eJaVV0/s1600/73683_105405226195292_105362022866279_46652_4843511_n.jpg"></img>
+                    </div>
+                    <div class="panel-footer">
+                        <p data-ng-bind="article.content"></p>
+                        <hr/>
+                        <small>
+                             Publicado a las {{article.created | date:"HH:mm:ss 'del' dd-MM-yyyy"}} por {{article.user.displayName}}
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="alert alert-warning text-center" data-ng-if="articles.$resolved && !articles.length">
-        No hay noticias... <a data-ui-sref="articles.create">create one</a>?
+        No hay noticias... <a data-ui-sref="articles.create">crear una</a>?
     </div>
 </section>
